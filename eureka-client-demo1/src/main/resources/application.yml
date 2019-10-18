@@ -1,17 +1,17 @@
 spring:
   application:
-    name: eureka-customer
+    name: eureka-customer             # others Eureka Client通过name调用所提供的服务
 
 server:
   port: 8081
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: localhost280608
   client:
-    serviceUrl:
+    serviceUrl:                                  # 向Eureka Server进行服务注册(可声明多个)
       defaultZone: http://localhost:9090/eureka/ #,http://localhost:8762/eureka/
-    enabled: false
+    enabled: true
 
 feign:
   hystrix:
